@@ -6,7 +6,7 @@ var app = {}
 // Mapping of beacon names to page ids.
 app.beaconPages =
 {
-	'Adafruit Bluefruit LE':'page-feet',
+	'9ecadc24-0ee5-a9e0-93f3-a3b50100406e':'page-feet',
 	'BEACON2':'page-shoulders',
 	'BEACON3':'page-face'
 }
