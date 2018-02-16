@@ -6,9 +6,9 @@ var app = {}
 // Mapping of beacon names to page ids.
 app.beaconPages =
 {
-	'9ecadc24-0ee5-a9e0-93f3-a3b50100406e':'page-feet',
-	'BEACON2':'page-shoulders',
-	'BEACON3':'page-face'
+	'canteen1':'canteenDiv',
+	'BEACON2':'libraryDiv',
+	'BEACON3':'classroomDiv'
 }
 
 // Signal strength of beacons.
@@ -55,7 +55,7 @@ app.deviceFound = function(deviceInfo)
 	// that we filter this out below.
 
 	// Have we found one of our beacons?
-	if (app.beaconPages[deviceInfo.name] && deviceInfo.rssi < 0)
+	if (app.beaconPages[deviceInfo.name] && deviceInfo.rssi > -50)
 	{
 		// Update signal strength for beacon.
 		app.beaconRSSI[deviceInfo.name] =
